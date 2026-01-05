@@ -15,6 +15,25 @@
     <main>
       <section id="activities-container">
         <h3>Available Activities</h3>
+        <!-- Template for activity cards -->
+        <template id="activity-template">
+          <div class="activity-card">
+            <h4 class="activity-title"><!-- title --></h4>
+            <p class="activity-desc"><!-- description --></p>
+            <p class="activity-schedule"><strong>Schedule:</strong> <!-- schedule --></p>
+            <p class="activity-capacity"><strong>Capacity:</strong> <span class="capacity-used"><!-- used --></span>/<span class="capacity-max"><!-- max --></span></p>
+
+            <!-- Participants section -->
+            <div class="participants">
+              <h5>Participants</h5>
+              <ul class="participants-list">
+                <!-- participant <li> elements will be injected here -->
+              </ul>
+              <p class="no-participants hidden">No participants yet.</p>
+            </div>
+          </div>
+        </template>
+
         <div id="activities-list">
           <!-- Activities will be loaded here -->
           <p>Loading activities...</p>
