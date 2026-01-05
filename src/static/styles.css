@@ -147,8 +147,9 @@ button:hover {
 }
 
 .participants-list {
-  list-style: disc;
-  margin-left: 20px;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
   max-height: 110px;
   overflow-y: auto;
   padding: 6px 8px;
@@ -157,20 +158,32 @@ button:hover {
   border-radius: 4px;
 }
 
-.participants-list li {
+.participant-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 4px 0;
   color: #444;
   font-size: 14px;
-  display: list-item;
 }
 
-.participants-list li + li {
+.participant-item + .participant-item {
   border-top: 1px dashed #f2f2f2;
   padding-top: 6px;
 }
 
-.participants-list li::marker {
-  color: #1a237e;
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.delete-btn:hover {
+  background: rgba(198,40,40,0.08);
 }
 
 .no-participants {
